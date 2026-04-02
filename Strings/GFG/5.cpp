@@ -1,0 +1,45 @@
+//https://practice.geeksforgeeks.org/problems/palindrome-string0817/1#
+// { Driver Code Starts
+//Initial Template for C
+
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+
+ // } Driver Code Ends
+//User function Template for C
+
+int isPalindrome(char S[])
+{
+    int len=strlen(S);
+    for(int i=0;i<len/2;i++)
+    {
+        if(S[i]!=S[len-i-1])
+        {
+            return 0;
+        }
+        
+        
+    }
+    return 1;
+    // Your code goes here
+}
+
+// { Driver Code Starts.
+
+int main() 
+{
+   	int t;
+   	scanf("%d", &t);
+   	while(t--)
+   	{
+   		char s[100000];
+   		scanf("%s", s);
+
+
+   		printf("%d\n", isPalindrome(s));
+   	}
+
+    return 0;
+}  // } Driver Code Ends
